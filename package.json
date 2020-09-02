@@ -32,5 +32,12 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist/",
+    "examples/",
+    "src/"
+  ]
 }
