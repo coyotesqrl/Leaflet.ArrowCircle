@@ -1,5 +1,5 @@
 {
-  "name": "leaflet-arrowcircle",
+  "name": "@coyotesqrl/leaflet-arrowcircle",
   "version": "1.0.0",
   "description": "Circle markers with directional arrows.",
   "main": "src/L.ArrowCircle.js",
