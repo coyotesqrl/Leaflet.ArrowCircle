@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Leaflet ArrowCircle Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha384-eS4bw6aEvhCSXWGP85ANR/N8isWKzT7P36NvcuTJGkrj6wsbxLVpXslrNXYHyseD"
+      crossorigin="anonymous"
+  />
+  <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet-src.js"
+      integrity="sha384-GJE+EZPUnTlavJozdKjisXiA6Uq8dLMA7cYpQp+KzUgetPjRbn8+jh9Hte+ZD/u4"
+      crossorigin="anonymous"
+  ></script>
+  <script src="https://raw.githubusercontent.com/coyotesqrl/Leaflet.ArrowCircle/master/src/L.ArrowCircle.js"></script>
+</head>
+<body>
+<div id="mapid" style="width: 800px; height: 600px"></div>
+<script>
+  let mymap = L.map("mapid").setView([41.8, -77.1], 6);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution:
+        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+    updateWhenIdle: true,
+    updateWhenZooming: false,
+  }).addTo(mymap);
+
+  L.marker
+  .arrowCircle([43.0957513, -73.5817547], {
+    iconOptions: { rotation: 184 },
+  })
+  .bindPopup("Schuyler House")
+  .addTo(mymap);
+
+  L.marker
+  .arrowCircle([40.8213605, -73.9473024], {
+    iconOptions: { color: "rgb(80, 180,  255)", rotation: 219 },
+  })
+  .bindPopup("The Grange")
+  .addTo(mymap);
+
+  L.marker
+  .arrowCircle([40.2316808, -74.8039348], {
+    iconOptions: { color: "rgb(200, 30, 240)", rotation: 42 },
+  })
+  .bindPopup("The Battle of Trenton")
+  .addTo(mymap);
+
+  L.marker
+  .arrowCircle([40.2002, -79.9226], {
+    iconOptions: {
+      size: 180,
+      opacity: 0.7,
+      color: "rgb(100, 230, 100)",
+      rotation: 85.222,
+    },
+  })
+  .bindPopup("Whiskey Point")
+  .addTo(mymap);
+
+  // Weehawken Dueling Grounds
+  // L.marker([40.7702241, -74.0169492]).addTo(mymap);
+</script>
+</body>
+</html>
