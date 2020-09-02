@@ -29,5 +29,8 @@
   "scripts": {
     "prepublish": "gulp dist",
     "fmt": "prettier --write ."
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
