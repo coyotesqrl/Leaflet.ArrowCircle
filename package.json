@@ -1,6 +1,6 @@
 {
   "name": "@coyotesqrl/leaflet-arrowcircle",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Circle markers with directional arrows.",
   "main": "src/L.ArrowCircle.js",
   "author": {
@@ -31,8 +31,10 @@
     "fmt": "prettier --write ."
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
+  "private": false,
   "files": [
     "README.md",
     "LICENSE",
